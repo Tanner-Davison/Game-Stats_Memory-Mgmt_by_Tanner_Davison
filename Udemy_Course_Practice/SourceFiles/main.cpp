@@ -6,8 +6,17 @@ using namespace std;
 
 int main() {
 	bool playing = true;
-
+	int myNum = 23;
 	PlayerStats player1{ 100, 50,0,0,200, 10, 1 }, player2{ 100,30,0,0,200,100,3 };
+
+	// POINTERS
+	int* demopntr = nullptr;
+
+	cout << demopntr << endl;
+	demopntr = &myNum;
+	cout << demopntr << endl;
+	cout << *demopntr << endl;
+	///////
 	player1.setLocation(122.2f, 300.3f);
 	player2.setLocation(300.2f, 423.53f);
 	PlayerStats players[] = { player1, player2 };
