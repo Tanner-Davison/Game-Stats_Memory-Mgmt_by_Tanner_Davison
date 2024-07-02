@@ -23,7 +23,7 @@
     <ClInclude Include="Headers\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SourceFiles\Headers\EntityHeader.h">
+    <ClInclude Include="SourceFiles\Headers\Entities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

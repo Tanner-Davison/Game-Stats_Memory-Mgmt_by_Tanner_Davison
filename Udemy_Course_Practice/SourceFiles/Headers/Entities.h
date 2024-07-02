@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 using namespace std;
 
@@ -42,6 +41,9 @@ struct PlayerStats
 		cout << "LEVEL: " << level << endl;
 	}
 };
+void printLocation(Vector2D location) {
+	cout << "LOCATION : " << location.x << " " << location.y << endl;
+}
 struct AIStats
 {
 	// Ai Health 

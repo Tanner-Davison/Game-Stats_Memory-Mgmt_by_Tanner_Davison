@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Entity.h" />
-    <ClInclude Include="SourceFiles\Headers\EntityHeader.h" />
+    <ClInclude Include="SourceFiles\Headers\Entities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
