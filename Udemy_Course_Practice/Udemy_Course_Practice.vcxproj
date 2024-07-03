@@ -24,6 +24,7 @@
     <ProjectGuid>{774de5b5-b1c4-428d-927e-30c6bf6ff68d}</ProjectGuid>
     <RootNamespace>UdemyCoursePractice</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CPlusPlusNotes</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
