@@ -28,6 +28,12 @@ struct PlayerStats
 		location.x = p;
 		location.y = q;
 	}
+	void setLocation(Vector2D vec) {
+		{
+			location.x = vec.x;
+			location.y = vec.y;
+		}
+	}
 	Vector2D getLocation()
 		const {
 		return location;
@@ -51,3 +57,4 @@ struct AIStats
 	// Ai Weapon Damage
 	int weaponDamage;
 };
+

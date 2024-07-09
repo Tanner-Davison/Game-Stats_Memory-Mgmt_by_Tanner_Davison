@@ -7,42 +7,54 @@ void inputScores(int& x, int& y, int& z) {
 	cout << "Input Scores per game: " << endl;
 	cin >> x >> y >> z;
 }
+
+
+
 float getAverageScore(const int& x, const int& y, const int& z) {
 
 	return (x + y + z) / 3.0f;
 }
+
+template <typename MyAv>
+void print(const MyAv& value) {
+	cout << value;
+}
+
 int main() {
 
 
-	int demoArray[]{ 23,32,3333,6 };
-	int* ptr{ demoArray };         // points to demoarray at index 0
-	int& myRef{ *ptr };            // this is a reference to the pointer 
-	// setting the reference that is referring to the pointer to reinitialize to 12
-	int i = 0;
-	cout << "DemoArray Size: " << sizeof(demoArray) << " Bytes" << endl;
-	cout << "demoArray Memory: " << &demoArray << endl;
+	print(32);
 
-	cout << "\nPtr" << " Value: " << (*ptr) << endl;
-	cout << "Size: " << sizeof(*ptr) << " Bytes" << endl;
-	cout << "Memory Location: " << &ptr << endl;
+	//int demoArray[]{ 23,32,3333,6 };
+	//int* ptr{ demoArray };         // points to demoarray at index 0
+	//int& myRef{ *ptr };            // this is a reference to the pointer 
+	//// setting the reference that is referring to the pointer to reinitialize to 12
+	//int i = 0;
+	//cout << "DemoArray Size: " << sizeof(demoArray) << " Bytes" << endl;
+	//cout << "demoArray Memory: " << &demoArray << endl;
 
-	cout << "\nmyRef Var Value : " << myRef << " " << "\nSize: " << sizeof(myRef) << " Bytes" << endl;
-	cout << "Memory Location : " << &myRef << endl;
-	int q = 12;
-	myRef = q;
-	cout << "\nREF after being reinitialized  " << myRef << " Size: " << sizeof(myRef) << endl;
-	cout << "Memory location of my ref: " << &myRef << endl;
-	cout << "Changed value in demoArray[0] " << demoArray[0] << endl;
+	//cout << "\nPtr" << " Value: " << (*ptr) << endl;
+	//cout << "Size: " << sizeof(*ptr) << " Bytes" << endl;
+	//cout << "Memory Location: " << &ptr << endl;
 
-	int score1{}, score2{}, score3{};
+	//cout << "\nmyRef Var Value : " << myRef << " " << "\nSize: " << sizeof(myRef) << " Bytes" << endl;
+	//cout << "Memory Location : " << &myRef << endl;
+	//int q = 12;
+	//myRef = q;
+	//cout << "\nREF after being reinitialized  " << myRef << " Size: " << sizeof(myRef) << endl;
+	//cout << "Memory location of my ref: " << &myRef << endl;
+	//cout << "Changed value in demoArray[0] " << demoArray[0] << endl;
 
-	inputScores(score1, score2, score3);
-	float averageScore = getAverageScore(score1, score2, score3);
-	cout << "Youre average score was: " << averageScore << endl;
+	//int score1{}, score2{}, score3{};
 
+	//inputScores(score1, score2, score3);
+	//float averageScore = getAverageScore(score1, score2, score3);
+	//cout << "Youre average score was: " << averageScore << endl;
 
-
-
+	//Vector2D newLocation{ 32.2f, 44.2f };
+	//PlayerStats player1{ 100,32,0,0,200,10,2 };
+	//player1.setLocation(newLocation);
+	//player1.readStats();
 
 	//bool playing = true;
 	//int myNum = 23;
