@@ -85,6 +85,27 @@ unsigned long factorial(unsigned long n) {
 		return n * factorial(n - 1);
 	}
 }
+
+void checkNum(int ptr, int answer) {
+	int static trys = 1;
+
+	cout << " Enter guess #" << trys << " ";
+	cin >> ptr;
+
+	if (ptr == answer) {
+		cout << "\ncongrats you guessed it in " << trys << " trys!" << "\n The Answer was : " << answer;
+	}
+	else if (ptr < answer) {
+		cout << "\nToo Low, Try Again...";
+		trys++;
+		checkNum(ptr, answer);
+	}
+	else {
+		cout << "\nToo High, Try Again...";
+		trys++;
+		checkNum(ptr, answer);
+	}
+}
 int main() {
 	/*int size;
 	GreatestNum* stat1 = new GreatestNum{ 50 };
@@ -120,7 +141,15 @@ int main() {
 	//	cout << randomNum << '\n';
 	//}
 
-	cout << factorial(33);
+	//GUESS MY NUM GAME
+
+	int randomNum{}, guess{};
+	srand(static_cast<unsigned int>(time(nullptr)));
+	randomNum = 1 + rand() % 51;
+
+	cout << " Guess My Secret Number! " << "\n";
+
+	checkNum(guess, randomNum);
 
 	return 0;
 }
