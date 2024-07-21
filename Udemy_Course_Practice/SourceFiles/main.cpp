@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Headers/Entities.h"
 #include <string>
+#include <cstdlib> // for rand()
+#include <ctime> // for time()
+
 
 using namespace std;
 
@@ -74,9 +77,16 @@ GreatestNum* getTheWinner(GreatestNum* stat1, GreatestNum* stat2) {
 	}
 }
 
-
+unsigned long factorial(unsigned long n) {
+	if (n == 0) {
+		return 1;
+	}
+	else {
+		return n * factorial(n - 1);
+	}
+}
 int main() {
-	int size;
+	/*int size;
 	GreatestNum* stat1 = new GreatestNum{ 50 };
 	GreatestNum* stat2 = new GreatestNum{ 25 };
 
@@ -85,14 +95,32 @@ int main() {
 	cin >> size;
 	cout << endl;
 
-	int* scoresP = new int[size];
+	int* scoresP = new int[size];*/
 
 
-	inputArr(scoresP, size);
+	/*inputArr(scoresP, size);
 	printArr(scoresP, size);
 	verifyList(scoresP, size);
 	GreatestNum* winner = getTheWinner(stat1, stat2);
 	cout << "\n\nAnd the winner is " << winner->score << endl;
-	delete[] scoresP;
+	delete[] scoresP;*/
+
+
+	//RANDOM NUMBER GENERATOR
+	//int randomNum{}, rolls{ 3 };
+	//int r{ 6 };
+	//int lowerBounds{ 1 };
+	//cout << '\n';
+
+	//srand(static_cast<unsigned int>(time(nullptr)));
+
+	//for (int i = 0; i < rolls; i++)
+	//{
+	//	randomNum = lowerBounds + rand() % r + 1;
+	//	cout << randomNum << '\n';
+	//}
+
+	cout << factorial(33);
+
 	return 0;
 }
