@@ -139,13 +139,13 @@ int main() {
 
 	//GUESS MY NUM GAME
 
-	int randomNum{}, guess{}, tries{};
+	/*int randomNum{}, guess{}, tries{};
 	srand(static_cast<unsigned int>(time(nullptr)));
 	randomNum = 1 + rand() % 100;
 
 	cout << " Guess My Secret Number! " << "\n";
 
-	checkNum(guess, randomNum, tries);
+	checkNum(guess, randomNum, tries);*/
 
 	return 0;
 }
