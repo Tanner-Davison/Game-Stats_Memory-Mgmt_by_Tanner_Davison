@@ -1,9 +1,9 @@
 #include <iostream>
 #include "Headers/Entities.h"
+#include "GameFiles/GameStats.h"
 #include <string>
 #include <cstdlib> // for rand()
 #include <ctime> // for time()
-
 
 using namespace std;
 
@@ -65,6 +65,7 @@ struct GreatestNum {
 
 };
 
+
 GreatestNum* getTheWinner(GreatestNum* stat1, GreatestNum* stat2) {
 	if (stat1->score > stat2->score) {
 		return stat1;
@@ -102,50 +103,17 @@ void checkNum(int ptr, int answer, int tries) {
 		checkNum(ptr, answer, tries);
 	}
 }
+
+
+
 int main() {
-	/*int size;
-	GreatestNum* stat1 = new GreatestNum{ 50 };
-	GreatestNum* stat2 = new GreatestNum{ 25 };
 
+	GameStats* game = new GameStats;
 
-	cout << "How many scores would you like to track?\n";
-	cin >> size;
-	cout << endl;
+	game->setCurrentLevel(3);
 
-	int* scoresP = new int[size];*/
+	cout << game->getCurrentLevel();
 
-
-	/*inputArr(scoresP, size);
-	printArr(scoresP, size);
-	verifyList(scoresP, size);
-	GreatestNum* winner = getTheWinner(stat1, stat2);
-	cout << "\n\nAnd the winner is " << winner->score << endl;
-	delete[] scoresP;*/
-
-
-	//RANDOM NUMBER GENERATOR
-	//int randomNum{}, rolls{ 3 };
-	//int r{ 6 };
-	//int lowerBounds{ 1 };
-	//cout << '\n';
-
-	//srand(static_cast<unsigned int>(time(nullptr)));
-
-	//for (int i = 0; i < rolls; i++)
-	//{
-	//	randomNum = lowerBounds + rand() % r + 1;
-	//	cout << randomNum << '\n';
-	//}
-
-	//GUESS MY NUM GAME
-
-	int randomNum{}, guess{}, tries{};
-	srand(static_cast<unsigned int>(time(nullptr)));
-	randomNum = 1 + rand() % 100;
-
-	cout << " Guess My Secret Number! " << "\n";
-
-	checkNum(guess, randomNum, tries);
-
+	delete game;
 	return 0;
 }
