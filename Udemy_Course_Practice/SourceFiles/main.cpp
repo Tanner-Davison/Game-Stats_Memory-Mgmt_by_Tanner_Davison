@@ -86,24 +86,20 @@ unsigned long factorial(unsigned long n) {
 	}
 }
 
-void checkNum(int ptr, int answer) {
-	int static trys = 1;
-
-	cout << " Enter guess #" << trys << " ";
+void checkNum(int ptr, int answer, int tries) {
+	cout << " Enter guess #" << ++tries << " ";
 	cin >> ptr;
 
 	if (ptr == answer) {
-		cout << "\ncongrats you guessed it in " << trys << " trys!" << "\n The Answer was : " << answer;
+		cout << "\ncongrats you guessed it in " << tries << " trys!" << "\n The Answer was : " << answer;
 	}
 	else if (ptr < answer) {
 		cout << "\nToo Low, Try Again...";
-		trys++;
-		checkNum(ptr, answer);
+		checkNum(ptr, answer, tries);
 	}
 	else {
 		cout << "\nToo High, Try Again...";
-		trys++;
-		checkNum(ptr, answer);
+		checkNum(ptr, answer, tries);
 	}
 }
 int main() {
@@ -143,13 +139,13 @@ int main() {
 
 	//GUESS MY NUM GAME
 
-	int randomNum{}, guess{};
+	int randomNum{}, guess{}, tries{};
 	srand(static_cast<unsigned int>(time(nullptr)));
-	randomNum = 1 + rand() % 51;
+	randomNum = 1 + rand() % 100;
 
 	cout << " Guess My Secret Number! " << "\n";
 
-	checkNum(guess, randomNum);
+	checkNum(guess, randomNum, tries);
 
 	return 0;
 }
