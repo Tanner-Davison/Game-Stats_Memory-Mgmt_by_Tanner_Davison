@@ -110,10 +110,13 @@ int main() {
 
 	GameStats* game = new GameStats;
 
-	game->setCurrentLevel(3);
+	game->setCurrentLevel(25);
 
 	cout << game->getCurrentLevel();
+	cout << "read Location: ";
+	game->readLocation();
 
 	delete game;
+
 	return 0;
 }
