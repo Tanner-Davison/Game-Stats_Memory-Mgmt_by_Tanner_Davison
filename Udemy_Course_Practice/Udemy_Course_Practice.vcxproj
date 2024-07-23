@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Headers\Entities\Entities.cpp" />
     <ClCompile Include="Headers\GameFiles\GameStats.cpp" />
     <ClCompile Include="SourceFiles\main.cpp" />
   </ItemGroup>

@@ -21,6 +21,9 @@
     <ClCompile Include="Headers\GameFiles\GameStats.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Headers\Entities\Entities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Entities\Entities.h">

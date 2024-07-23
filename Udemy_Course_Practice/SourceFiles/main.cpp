@@ -110,6 +110,7 @@ int main() {
 
 	GameStats* game = new GameStats;
 	GameStats* game2 = new GameStats;
+	PlayerStats* tanner = new PlayerStats;
 
 	game->setCurrentLevel(25);
 
@@ -117,6 +118,8 @@ int main() {
 	game->dispLoc();
 	game->vec->setValues(200, 300.55f, 400.54f);
 	game->dispLoc();
+	cout << '\t\n';
+	tanner->readStats();
 
 	cout << "\nvalue of location X: " << " " << game->vec->getX();
 
@@ -130,5 +133,6 @@ int main() {
 	cout << "\n #of game instances running: " << game->instances << "\n";
 
 	delete game2;
+	delete tanner;
 	return 0;
 }
