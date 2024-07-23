@@ -5,7 +5,6 @@ using namespace std;
 struct Vector3D {
 	Vector3D();
 
-
 	Vector3D(float x1, float y1, float z1);
 
 	float getX(), getY(), getZ();
@@ -36,7 +35,7 @@ public:
 	//destructor declaration;
 	~GameStats();
 
-	int	getCurrentLevel();
+	int getCurrentLevel();
 	void setCurrentLevel(int level);
 	void dispLoc();
 
