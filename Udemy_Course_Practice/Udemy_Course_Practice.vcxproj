@@ -128,12 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SourceFiles\GameFiles\GameStats.cpp" />
+    <ClCompile Include="Headers\GameFiles\GameStats.cpp" />
     <ClCompile Include="SourceFiles\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SourceFiles\Headers\Entities.h" />
-    <ClInclude Include="SourceFiles\GameFiles\GameStats.h" />
+    <ClInclude Include="Headers\Entities\Entities.h" />
+    <ClInclude Include="Headers\GameFiles\GameStats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

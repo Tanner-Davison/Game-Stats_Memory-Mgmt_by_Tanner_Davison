@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Headers/Entities.h"
-#include "GameFiles/GameStats.h"
+#include "../Headers/Entities/Entities.h"
+#include "../Headers/GameFiles/GameStats.h"
 #include <string>
 #include <cstdlib> // for rand()
 #include <ctime> // for time()
@@ -109,6 +109,7 @@ void checkNum(int ptr, int answer, int tries) {
 int main() {
 
 	GameStats* game = new GameStats;
+	GameStats* game2 = new GameStats;
 
 	game->setCurrentLevel(25);
 
@@ -119,7 +120,15 @@ int main() {
 
 	cout << "\nvalue of location X: " << " " << game->vec->getX();
 
+	// created a dynamic way of showing how many instances of class objects that are created and currently running without being removed;
+	// using the static declarartion in class;
+	cout << "\n #of game instances running: " << game->instances << "\n";
+
 	delete game;
 
+
+	cout << "\n #of game instances running: " << game->instances << "\n";
+
+	delete game2;
 	return 0;
 }

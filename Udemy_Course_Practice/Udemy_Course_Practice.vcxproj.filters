@@ -18,15 +18,15 @@
     <ClCompile Include="SourceFiles\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SourceFiles\GameFiles\GameStats.cpp">
+    <ClCompile Include="Headers\GameFiles\GameStats.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SourceFiles\Headers\Entities.h">
+    <ClInclude Include="Headers\Entities\Entities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SourceFiles\GameFiles\GameStats.h">
+    <ClInclude Include="Headers\GameFiles\GameStats.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -41,6 +41,7 @@ public:
 	void dispLoc();
 
 	Vector3D* vec;
+	static int instances;
 
 private:
 

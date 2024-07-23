@@ -4,7 +4,11 @@
 using namespace std;
 
 //constructor definition;
-GameStats::GameStats() : currentLevel(new int(1)), vec(new Vector3D) {}
+GameStats::GameStats() : currentLevel(new int(1)), vec(new Vector3D) {
+	instances++;
+}
+
+int GameStats::instances = 0;
 
 //overloaded constructor definition;
 GameStats::GameStats(int x) : currentLevel(new int(x)), vec(new Vector3D) {}
@@ -15,6 +19,7 @@ GameStats::~GameStats() {
 	cout << "\nDestructoring GameStats";
 	delete currentLevel;
 	delete vec;
+	instances--;
 }
 
 //member function;
