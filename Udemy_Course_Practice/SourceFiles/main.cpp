@@ -112,9 +112,12 @@ int main() {
 
 	game->setCurrentLevel(25);
 
-	cout << game->getCurrentLevel();
-	cout << "read Location: ";
-	game->readLocation();
+	cout << "Current Level: " << game->getCurrentLevel() << "\n";
+	game->dispLoc();
+	game->vec->setValues(200, 300.55f, 400.54f);
+	game->dispLoc();
+
+	cout << "\nvalue of location X: " << " " << game->vec->getX();
 
 	delete game;
 

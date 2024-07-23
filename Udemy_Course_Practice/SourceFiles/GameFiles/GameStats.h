@@ -5,35 +5,45 @@ using namespace std;
 struct Vector3D {
 	Vector3D();
 
-	Vector3D(int x1, int y1, int z1);
 
-	void setValues(int x1, int y1, int z1);
+	Vector3D(float x1, float y1, float z1);
 
-	void printLocations();
+	float getX(), getY(), getZ();
+
+	void setValues(float x1, float y1, float z1);
+
+	void disp();
 
 	~Vector3D();
 
 private:
-	int* x1;
-	int* y1;
-	int* z1;
+	float* x1;
+	float* y1;
+	float* z1;
 };
 
 class GameStats
 {
 public:
-	//constructor
+	//constructor declaration;
 	GameStats();
+	//Paramaterized constructor declaration;
 	GameStats(int x);
+	// overloaded Constructor
+
+	GameStats(int x, float x1, float y1, float z1);
+
+	//destructor declaration;
 	~GameStats();
 
-
 	int	getCurrentLevel();
-
 	void setCurrentLevel(int level);
-	void readLocation();
+	void dispLoc();
+
+	Vector3D* vec;
+
 private:
 
 	int* currentLevel;
-	Vector3D* vec;
+
 };
