@@ -7,13 +7,15 @@ struct Vector3D {
 
 	Vector3D(float x1, float y1, float z1);
 
-	float getX(), getY(), getZ();
+	float getX() const;
+	float getY() const;
+	float getZ() const;
 
 	void setValues(float x1, float y1, float z1);
 
 	void compare(const Vector3D& other);
 
-	void disp();
+	void disp() const;
 
 	~Vector3D();
 
@@ -27,15 +29,15 @@ class GameStats
 {
 public:
 	//constructor declaration;
-	GameStats();
-	//Paramaterized constructor declaration;
-	GameStats(int x);
+
+	//Paramaterized constructor declaration; : also gave the main constructor default fallback values;
+	GameStats(int x = 1, int y = 1);
 	// overloaded Constructor
 	GameStats(int x, int room, float x1, float y1, float z1);
 	//destructor declaration;
 	~GameStats();
 
-	int getCurrentLevel();
+	int getCurrentLevel() const;
 	int getCurrentRoom();
 	GameStats& setCurrentRoom(int room);
 	GameStats& setCurrentLevel(int level);

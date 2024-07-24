@@ -104,7 +104,9 @@ void checkNum(int ptr, int answer, int tries) {
 	}
 }
 
-
+void printMember(const GameStats& obj) {
+	cout << "\nPrinting Current Level with Print Member: " << obj.getCurrentLevel() << '\n';
+}
 
 int main() {
 
@@ -112,17 +114,15 @@ int main() {
 	GameStats* game2 = new GameStats;
 	Vector3D* checkingVec = new Vector3D;
 
-	{
-		GameStats game3, game4;
-		cout << "\nGame Stats Active " << game->s_Instances;
-	}
 	game->setCurrentLevel(1000).setCurrentRoom(50);
+	printMember(*game2);
 
 	cout << "\nCurrent Level: " << game->getCurrentLevel() << "\n";
 	cout << "\nCurrent ROOM: " << game->getCurrentRoom() << "\n";
 
 	game->dispLoc();
 	game->vec->setValues(200, 300.55f, 400.54f);
+
 	game->dispLoc();
 	cout << '\n';
 
@@ -140,6 +140,9 @@ int main() {
 
 	delete game, game2, checkingVec;
 
+	const int myVar = 10;
+
+	int const* myPtr = &myVar;
 
 	return 0;
 }
