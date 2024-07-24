@@ -4,7 +4,9 @@
 #include <string>
 #include <cstdlib> // for rand()
 #include <ctime> // for time()
-
+#include <windows.h>
+#include <fmt/core.h>
+#include <fmt/color.h>
 using namespace std;
 
 void inputArr(int* scoresP, int size) {
@@ -108,6 +110,11 @@ void printMember(const GameStats& obj) {
 	cout << "\nPrinting Current Level with Print Member: " << obj.getCurrentLevel() << '\n';
 }
 
+void setColor(int color) {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, color);
+}
+
 int main() {
 
 	GameStats* game = new GameStats;
@@ -132,12 +139,21 @@ int main() {
 	cout << "\n CHECKING VEC: ";
 	game->vec->compare(*game->vec);
 
-	cout << "\nvalue of location X: " << " " << game->vec->getX();
+	cout << "\nvalue of location X: " << " " << game->vec->getX() << "\n";
+	int demoInt{};
+	{
+		int x = 100;
+		int y = 50;
+		demoInt = x > y ? x : y;
+	}
+
+	cout << "\nDEMO INT: " << demoInt << '\n';
 
 	// created a dynamic way of showing how many instances of class objects that are created and currently running without being removed;
 	// using the static declarartion in class;
-	cout << "\n # Of game instances running: " << game->s_Instances << "\n";
 
+	cout << "\n # Of game instances running: " << game->s_Instances << "\n";
+	fmt::print(fmt::fg(fmt::color::red), "this is red\n");
 	delete game, game2, checkingVec;
 
 	const int myVar = 10;
