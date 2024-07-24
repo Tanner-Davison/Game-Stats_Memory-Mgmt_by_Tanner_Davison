@@ -110,29 +110,36 @@ int main() {
 
 	GameStats* game = new GameStats;
 	GameStats* game2 = new GameStats;
-	PlayerStats* tanner = new PlayerStats;
+	Vector3D* checkingVec = new Vector3D;
 
-	game->setCurrentLevel(25);
+	{
+		GameStats game3, game4;
+		cout << "\nGame Stats Active " << game->s_Instances;
+	}
+	game->setCurrentLevel(1000).setCurrentRoom(50);
 
-	cout << "Current Level: " << game->getCurrentLevel() << "\n";
+	cout << "\nCurrent Level: " << game->getCurrentLevel() << "\n";
+	cout << "\nCurrent ROOM: " << game->getCurrentRoom() << "\n";
+
 	game->dispLoc();
 	game->vec->setValues(200, 300.55f, 400.54f);
 	game->dispLoc();
-	cout << '\t\n';
-	tanner->readStats();
+	cout << '\n';
+
+	cout << "\n CHECKING VEC: ";
+	checkingVec->compare(*game->vec);
+
+	cout << "\n CHECKING VEC: ";
+	game->vec->compare(*game->vec);
 
 	cout << "\nvalue of location X: " << " " << game->vec->getX();
 
 	// created a dynamic way of showing how many instances of class objects that are created and currently running without being removed;
 	// using the static declarartion in class;
-	cout << "\n #of game instances running: " << game->instances << "\n";
+	cout << "\n # Of game instances running: " << game->s_Instances << "\n";
 
-	delete game;
+	delete game, game2, checkingVec;
 
 
-	cout << "\n #of game instances running: " << game->instances << "\n";
-
-	delete game2;
-	delete tanner;
 	return 0;
 }

@@ -11,6 +11,8 @@ struct Vector3D {
 
 	void setValues(float x1, float y1, float z1);
 
+	void compare(const Vector3D& other);
+
 	void disp();
 
 	~Vector3D();
@@ -29,21 +31,22 @@ public:
 	//Paramaterized constructor declaration;
 	GameStats(int x);
 	// overloaded Constructor
-
-	GameStats(int x, float x1, float y1, float z1);
-
+	GameStats(int x, int room, float x1, float y1, float z1);
 	//destructor declaration;
 	~GameStats();
 
 	int getCurrentLevel();
-	void setCurrentLevel(int level);
+	int getCurrentRoom();
+	GameStats& setCurrentRoom(int room);
+	GameStats& setCurrentLevel(int level);
+
 	void dispLoc();
 
 	Vector3D* vec;
-	static int instances;
+	static int s_Instances;
 
 private:
 
 	int* currentLevel;
-
+	int* currentRoom;
 };

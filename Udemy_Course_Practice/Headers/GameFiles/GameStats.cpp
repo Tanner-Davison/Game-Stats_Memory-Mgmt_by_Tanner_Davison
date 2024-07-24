@@ -4,37 +4,44 @@
 using namespace std;
 
 //constructor definition;
-GameStats::GameStats() : currentLevel(new int(1)), vec(new Vector3D) {
-	instances++;
+GameStats::GameStats() : currentLevel(new int(1)), currentRoom(new int(0)), vec(new Vector3D) {
+	s_Instances++;
 }
 
-int GameStats::instances = 0;
+int GameStats::s_Instances = 0;
 
 //overloaded constructor definition;
-GameStats::GameStats(int x) : currentLevel(new int(x)), vec(new Vector3D) {}
+GameStats::GameStats(int x) : currentLevel(new int(x)), currentRoom(new int(0)), vec(new Vector3D) {}
 
-GameStats::GameStats(int x, float x1, float y1, float z1) : currentLevel(new int(x)), vec(new Vector3D{ x1,y1,z1 }) {}
+
+GameStats::GameStats(int x, int room, float x1, float y1, float z1) : currentLevel(new int(x)), currentRoom(new int(room)), vec(new Vector3D{ x1,y1,z1 }) {}
+
 //destructor definition;
 GameStats::~GameStats() {
 	cout << "\nDestructoring GameStats";
 	delete currentLevel;
 	delete vec;
-	instances--;
+	delete currentRoom;
+	s_Instances--;
 }
 
-//member function;
+//member functions;
 int GameStats::getCurrentLevel() {
 	return *currentLevel;
 }
-
-//member function;
-void GameStats::dispLoc() {
-	vec->disp();
+int GameStats::getCurrentRoom() {
+	return *currentRoom;
 }
-
-//member function;
-void GameStats::setCurrentLevel(int level) {
+void GameStats::dispLoc() {
+	this->vec->disp();
+}
+GameStats& GameStats::setCurrentRoom(int room) {
+	*currentRoom = room;
+	return *this;
+}
+GameStats& GameStats::setCurrentLevel(int level) {
 	*currentLevel = level;
+	return *this;
 }
 
 //constructor definition;
@@ -61,6 +68,14 @@ float Vector3D::getY() {
 }
 float Vector3D::getZ() {
 	return *z1;
+}
+void Vector3D::compare(const Vector3D& other) {
+	if (this == &other) {
+		cout << "This object is of Struct Vector3D";
+	}
+	else {
+		cout << "\n This is not an original Vector3D";
+	}
 }
 // vector3d Destructor
 Vector3D::~Vector3D() {

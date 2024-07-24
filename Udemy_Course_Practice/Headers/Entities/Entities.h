@@ -6,14 +6,19 @@ struct Entity
 	// Income value of person
 	float income;
 };
+
 struct Vector2D {
+	Vector2D();
+
+	Vector2D(int x, int y);
+
 	float x;
 	float y;
 };
 
 struct PlayerStats {
 	PlayerStats(); // Constructor
-
+	PlayerStats(int h, int a, float x, float y, int wd, int xp, int l);
 	// Member variables
 	int health;
 	int armor;
