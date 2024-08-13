@@ -46,7 +46,7 @@ This C++ project demonstrates various concepts such as dynamic memory management
 1. Clone the repository:
 
     ```bash
-    git clone [https://github.com/your-username/game-statistics-entity-management.git](https://github.com/Tanner-Davison/CPLUS_PLUS_Learning_Project.git)
+    git clone https://github.com/Tanner-Davison/CPLUS_PLUS_Learning_Project.git
     ```
 
 2. Compile the code using a C++ compiler with support for the fmt library.
