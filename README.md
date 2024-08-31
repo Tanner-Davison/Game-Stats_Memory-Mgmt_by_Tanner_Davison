@@ -1,5 +1,7 @@
 # Game Statistics and Entity Management
 
+##Created By: Tanner Davison
+
 This C++ project demonstrates various concepts such as dynamic memory management, class object instances tracking, and user interaction for updating and verifying game statistics.
 
 ## Features
